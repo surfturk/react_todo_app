@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './todos'
+import AddTodo from './AddTodo'
 
 
 class App extends Component {
@@ -18,11 +19,16 @@ class App extends Component {
     })
   }
 
+  addTodo = (todo) => {
+
+  }
+
   render() {
   return (
     <div className="todo-pp container">
       <h1 className="center blue-text">Todos's</h1>
       <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+      <AddTodo addTodo={this.addTodo}/>
       
     </div>
   );
